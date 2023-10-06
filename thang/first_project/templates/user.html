@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>List of users</h1>
+    {% if list_users %}
+    <table>
+      <thead>
+        <th style="padding-right: 5px">First Name</th>
+        <th style="padding-right: 5px">LastName</th>
+        <th style="padding-right: 5px">Email</th>
+      </thead>
+      {% for item in list_users %}
+      <tr>
+        <td style="padding-right: 15px">{{item.firstname}}</td>
+        <td style="padding-right: 15px">{{item.lastname}}</td>
+        <td style="padding-right: 15px">{{item.email}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    <p>NO USER FOUND</p>
+    {%endif %}
+  </body>
+</html>
